@@ -1,4 +1,4 @@
-class Solution {
+class Solution1 {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val map = mutableMapOf<Int, Int>()
 
@@ -15,7 +15,7 @@ class Solution {
 }
 
 fun main() {
-    val solution = Solution()
+    val solution = Solution1()
     val nums = intArrayOf(2, 7, 11, 15)
     val target = 9
     val result = solution.twoSum(nums, target)
