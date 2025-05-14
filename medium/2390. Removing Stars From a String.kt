@@ -1,4 +1,4 @@
-class Solution2390 {
+class Solution {
     fun removeStars(s: String): String {
         val result = StringBuilder()
         for (char in s) {
@@ -12,11 +12,4 @@ class Solution2390 {
         }
         return result.toString()
     }
-}
-
-fun main() {
-    val solution = Solution2390()
-    val sentence = "leet**cod*e"
-    val s = solution.removeStars(sentence)
-    println(s)
 }

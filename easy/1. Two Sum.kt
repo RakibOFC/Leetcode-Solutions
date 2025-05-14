@@ -1,4 +1,4 @@
-class Solution1 {
+class Solution {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val map = mutableMapOf<Int, Int>()
 
@@ -12,12 +12,4 @@ class Solution1 {
 
         throw IllegalArgumentException("No two sum solution found")
     }
-}
-
-fun main() {
-    val solution = Solution1()
-    val nums = intArrayOf(2, 7, 11, 15)
-    val target = 9
-    val result = solution.twoSum(nums, target)
-    println("Indices: ${result[0]}, ${result[1]}")
 }

@@ -1,4 +1,4 @@
-class Solution2 {
+class Solution {
     fun lengthOfLongestSubstring(s: String): Int {
         val charSet = mutableSetOf<Char>()
         var left = 0
@@ -15,10 +15,4 @@ class Solution2 {
 
         return maxLength
     }
-}
-
-fun main() {
-    val solution = Solution2()
-    val s = "pwwkew"
-    println(solution.lengthOfLongestSubstring(s))
 }

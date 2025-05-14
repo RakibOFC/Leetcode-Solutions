@@ -7,13 +7,8 @@
  * fun guess(num:Int):Int {}
  */
 
-class Solution/*:GuessGame()*/ {
-    /*override */fun guessNumber(n:Int):Int {
+class Solution : GuessGame() {
+    override fun guessNumber(n:Int):Int {
         return 6
     }
-}
-
-fun main() {
-    val solution = Solution()
-    println(solution.guessNumber(10))
 }

@@ -1,4 +1,4 @@
-class Solution283 {
+class Solution {
     fun moveZeroes(nums: IntArray): Unit {
         var nonZeroIndex = 0
 
@@ -12,9 +12,4 @@ class Solution283 {
             }
         }
     }
-}
-
-fun main() {
-    val solution = Solution283()
-    println(solution.moveZeroes(intArrayOf(0, 1, 0, 3, 12)))
 }
