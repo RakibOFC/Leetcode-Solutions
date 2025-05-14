@@ -1,23 +1,18 @@
 class Solution {
     fun tribonacci(n: Int): Int {
-        var T_0 = 0
-        var T_1 = 1
-        var T_2 = 1
-        var i = 0
-        var sum = 0
+        if (n == 0) return 0
+        if (n == 1 || n == 2) return 1
 
-        return if (n == 0) T_0
-        else if (n == 1) T_1
-        else if (n == 2) T_2
-        else {
-            while (n - 1 > i + 1) {
-                sum = T_0 + T_1 + T_2
-                T_0 = T_1
-                T_1 = T_2
-                T_2 = sum
-                i++
-            }
-            sum
+        var t0 = 0
+        var t1 = 1
+        var t2 = 1
+
+        for (i in 3..n) {
+            val next = t0 + t1 + t2
+            t0 = t1
+            t1 = t2
+            t2 = next
         }
+        return t2
     }
 }
