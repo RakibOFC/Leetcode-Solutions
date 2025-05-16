@@ -30,3 +30,24 @@ class Solution:GuessGame() {
         return mid
     }
 }
+
+// Solution 2.
+class Solution : GuessGame() {
+    override fun guessNumber(n: Int): Int {
+        var start = 1
+        var end = n
+
+        while (start <= end) {
+            val mid = start + (end - start) / 2
+            val result = guess(mid)
+
+            when {
+                result == 0 -> return mid
+                result < 0 -> end = mid - 1
+                else -> start = mid + 1
+            }
+        }
+
+        return -1
+    }
+}
