@@ -7,8 +7,26 @@
  * fun guess(num:Int):Int {}
  */
 
-class Solution : GuessGame() {
+// Solution 1.
+class Solution:GuessGame() {
     override fun guessNumber(n:Int):Int {
-        return 6
+        if (guess(n) == 0) return n
+
+        var start = 1
+        var end = n
+        var mid: Int = n / 2
+
+        while (start < end) {
+            val guess = guess(mid)
+
+            if (guess == -1) {
+                end = mid
+            } else if (guess == 1) {
+                start = mid
+            } else return mid
+
+            mid = ((start.toLong() + end.toLong()) / 2).toInt()
+        }
+        return mid
     }
 }
