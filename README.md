@@ -2,6 +2,8 @@
 
 This repository contains my solutions to various Leetcode problems, implemented in **Kotlin**.
 
+📘 **[My LeetCode Profile](https://leetcode.com/u/RakibOFC/)**
+
 ## Repository Structure
 Solutions are organized by difficulty into the following folders:
 
