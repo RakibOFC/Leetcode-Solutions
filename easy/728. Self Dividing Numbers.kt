@@ -1,27 +1,21 @@
 class Solution {
     fun selfDividingNumbers(left: Int, right: Int): List<Int> {
-        var num = left
         val numList = mutableListOf<Int>()
 
-        while (num <= right) {
+        for (num in left..right) {
             var crrNum = num
             var isSelfDividing = true
 
             while (crrNum > 0) {
                 val digit = crrNum % 10
-                crrNum /= 10
-                if (digit != 0) {
-                    if (num % digit != 0) {
-                        isSelfDividing = false
-                        break
-                    }
-                } else {
+
+                if (digit == 0 || num % digit != 0) {
                     isSelfDividing = false
                     break
                 }
+                crrNum /= 10
             }
             if (isSelfDividing) numList.add(num)
-            num++
         }
         return numList
     }
