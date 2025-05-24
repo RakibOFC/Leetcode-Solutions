@@ -5,7 +5,7 @@ class Solution {
 
         var k = 1
 
-        for (i in 1 until nums.size) {
+        for (i in 1..<nums.size) {
             if (nums[i] != nums[k - 1]) {
                 nums[k] = nums[i]
                 k++
