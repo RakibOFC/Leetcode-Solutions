@@ -1,10 +1,11 @@
 class Solution {
     fun diagonalPrime(nums: Array<IntArray>): Int {
         var maxPrime = 0
+        val size = nums.size
 
-        for (i in nums.indices) {
+        for (i in 0..<size) {
             val num1 = nums[i][i]
-            val num2 = nums[i][nums.size - i - 1]
+            val num2 = nums[i][size - i - 1]
 
             if (isPrime(num1)) maxPrime = maxNum(num1, maxPrime)
             if (num1 != num2 && isPrime(num2)) maxPrime = maxNum(num2, maxPrime)
