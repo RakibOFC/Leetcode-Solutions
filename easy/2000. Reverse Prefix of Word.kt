@@ -1,4 +1,4 @@
-// Solution 2. (6ms)
+// Solution 3. (6ms)
 class Solution {
     fun reversePrefix(word: String, ch: Char): String {
         val idx = word.indexOf(ch)
@@ -15,6 +15,18 @@ class Solution {
             j--
         }
         return String(arr)
+    }
+}
+
+// Solution 2. (7ms)
+class Solution {
+    fun reversePrefix(word: String, ch: Char): String {
+        for (i in word.indices) {
+            if (word[i] == ch) {
+                return word.substring(0, i + 1).reversed() + word.substring(i + 1)
+            }
+        }
+        return word
     }
 }
 
