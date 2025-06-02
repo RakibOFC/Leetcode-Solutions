@@ -1,3 +1,20 @@
+// Solution 3. (135ms; not fixed)
+class Solution {
+    fun shuffle(nums: IntArray, n: Int): IntArray {
+        val newArr = IntArray(n * 2)
+        var i = 0
+        var j = n
+        var k = 0
+
+        while (i < n) {
+            newArr[k++] = nums[i++]
+            newArr[k++] = nums[j++]
+        }
+
+        return newArr
+    }
+}
+
 // Solution 2. (145ms)
 class Solution {
     fun shuffle(nums: IntArray, n: Int): IntArray {
