@@ -1,3 +1,4 @@
+// Solution 1. (1ms)
 class Solution {
     fun getConcatenation(nums: IntArray): IntArray {
         val n = nums.size
@@ -8,5 +9,12 @@ class Solution {
         }
 
         return ans
+    }
+}
+
+// Solution 2. (7ms)
+class Solution {
+    fun getConcatenation(nums: IntArray): IntArray {
+        return nums + nums
     }
 }
