@@ -1,5 +1,6 @@
 // Solution 2. (145ms)
-fun shuffle(nums: IntArray, n: Int): IntArray {
+class Solution {
+    fun shuffle(nums: IntArray, n: Int): IntArray {
         val newArr = IntArray(n * 2)
         var i = 0
         var j = n
@@ -12,6 +13,7 @@ fun shuffle(nums: IntArray, n: Int): IntArray {
 
         return newArr
     }
+}
 
 // Solution 1. (151ms)
 class Solution {
