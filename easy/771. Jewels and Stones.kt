@@ -1,3 +1,4 @@
+// Solution 1. (1ms)
 class Solution {
     fun numJewelsInStones(jewels: String, stones: String): Int {
         var stoneCount = 0
@@ -11,5 +12,12 @@ class Solution {
         }
 
         return stoneCount
+    }
+}
+
+// Solution 2. (7ms)
+class Solution {
+    fun numJewelsInStones(jewels: String, stones: String): Int {
+        return stones.count { it in jewels }
     }
 }
