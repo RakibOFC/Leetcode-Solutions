@@ -1,3 +1,11 @@
+// Solution 2. (8ms)
+class Solution {
+    fun removeTrailingZeros(num: String): String {
+        return num.dropLastWhile { it == '0' }
+    }
+}
+
+// Solution 1. (9ms)
 class Solution {
     fun removeTrailingZeros(num: String): String {
         val n = num.length
