@@ -1,3 +1,11 @@
+// Solution 3. (1ms)
+class Solution {
+    fun transformArray(nums: IntArray): IntArray {
+        val evenCount = nums.count { it % 2 == 0 }
+        return IntArray(nums.size) { if (it < evenCount) 0 else 1 }
+    }
+}
+
 // Solution 2. (1ms)
 class Solution {
     fun transformArray(nums: IntArray): IntArray {
