@@ -1,0 +1,13 @@
+class Solution {
+    fun reverseDegree(s: String): Int {
+        var productSum = 0
+
+        for (i in s.indices) {
+            val reversedAlphabet = 27 - (s[i].code - 96)
+
+            productSum += ((i + 1) * reversedAlphabet)
+        }
+
+        return productSum
+    }
+}
