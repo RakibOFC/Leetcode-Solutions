@@ -1,3 +1,11 @@
+// Solution 2. (20ms)
+class Solution {
+    fun mostWordsFound(sentences: Array<String>): Int {
+        return sentences.map { it.split(" ").size }.maxOrNull() ?: 0
+    }
+}
+
+// Solution 1. (19ms)
 class Solution {
     fun mostWordsFound(sentences: Array<String>): Int {
         var maxCounter = 0
