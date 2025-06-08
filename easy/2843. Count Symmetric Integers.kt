@@ -6,10 +6,10 @@ class Solution {
         for (n in low..high) {
             var numLen = 0
             var num = n
-            val numList = mutableListOf<Int>()
-            
+            val digits = mutableListOf<Int>() // this is reverse digit list
+
             while (num > 0) {
-                numList.add(num % 10)
+                digits.add(num % 10)
                 num /= 10
                 numLen++
             }
@@ -20,8 +20,8 @@ class Solution {
                 var secondHalf = 0
 
                 for (i in 0..<lenHalf) {
-                    firstHalf += numList[i]
-                    secondHalf += numList[i + lenHalf]
+                    firstHalf += digits[i + lenHalf]
+                    secondHalf += digits[i]
                 }
                 if (firstHalf == secondHalf) {
                     count++
