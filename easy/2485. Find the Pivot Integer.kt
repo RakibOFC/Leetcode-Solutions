@@ -1,12 +1,10 @@
 // Solution 1. (0ms)
 class Solution {
     fun pivotInteger(n: Int): Int {
-        val sumOfN = sumOfN(n)
-        val x = sqrt(sumOfN(n).toDouble()).toInt()
+        val sumOfN = n * (n + 1) / 2
+        val x = sqrt(sumOfN.toDouble()).toInt()
         return if (x * x == sumOfN) x else -1
     }
-
-    fun sumOfN(n: Int) = n * (n + 1) / 2
 }
 
 // Solution 1. (2ms)
