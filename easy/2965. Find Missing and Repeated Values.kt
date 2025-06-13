@@ -1,3 +1,30 @@
+// Solution 2. (1-2ms)
+class Solution {
+    fun findMissingAndRepeatedValues(grid: Array<IntArray>): IntArray {
+        val n = grid.size
+        val size = n * n
+        val freq = IntArray(size + 1)
+        var repeated = -1
+        var missing = -1
+
+        for (row in grid) {
+            for (num in row) {
+                freq[num]++
+            }
+        }
+
+        for (i in 1..size) {
+            when (freq[i]) {
+                0 -> missing = i
+                2 -> repeated = i
+            }
+        }
+
+        return intArrayOf(repeated, missing)
+    }
+}
+
+// Solution 1. (19-22ms)
 class Solution {
     fun findMissingAndRepeatedValues(grid: Array<IntArray>): IntArray {
         val size = grid.size
