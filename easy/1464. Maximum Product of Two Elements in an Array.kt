@@ -1,8 +1,8 @@
 // Solution 2. (0ms)
 class Solution {
     fun maxProduct(nums: IntArray): Int {
-        var max1 = Int.MIN_VALUE
-        var max2 = Int.MIN_VALUE
+        var max1 = 0
+        var max2 = 0
 
         for (num in nums) {
             if (max1 < num) {
