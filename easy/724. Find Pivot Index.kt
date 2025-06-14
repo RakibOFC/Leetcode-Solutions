@@ -1,3 +1,25 @@
+// Solution 2. (1ms)
+class Solution {
+    fun pivotIndex(nums: IntArray): Int {
+        val n = nums.size
+        var totalSum = 0
+        var sumLeft = 0
+
+        for (i in 0..<n) {
+            totalSum += nums[i]
+        }
+
+        for (i in 0..<n) {
+            val sumRight = totalSum - sumLeft - nums[i]
+            if (sumLeft == sumRight) return i
+            sumLeft += nums[i]
+        }
+
+        return -1
+    }
+}
+
+// Solution 1. (1ms)
 class Solution {
     fun pivotIndex(nums: IntArray): Int {
         val n = nums.size
