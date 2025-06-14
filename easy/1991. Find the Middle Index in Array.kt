@@ -1,3 +1,25 @@
+// Solution 2.
+class Solution {
+    fun findMiddleIndex(nums: IntArray): Int {
+        val n = nums.size
+        var totalSum = 0
+        var sumLeft = 0
+
+        for (i in 0..<n) {
+            totalSum += nums[i]
+        }
+
+        for (i in 0..<n) {
+            val sumRight = totalSum - sumLeft - nums[i]
+            if (sumLeft == sumRight) return i
+            sumLeft += nums[i]
+        }
+
+        return -1
+    }
+}
+
+// Solution 1.
 class Solution {
     fun findMiddleIndex(nums: IntArray): Int {
         val n = nums.size
