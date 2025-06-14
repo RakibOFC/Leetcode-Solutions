@@ -1,4 +1,4 @@
-// Solution 2.
+// Solution 2. (0-1ms)
 class Solution {
     fun findMiddleIndex(nums: IntArray): Int {
         val n = nums.size
@@ -19,7 +19,7 @@ class Solution {
     }
 }
 
-// Solution 1.
+// Solution 1. (1ms)
 class Solution {
     fun findMiddleIndex(nums: IntArray): Int {
         val n = nums.size
