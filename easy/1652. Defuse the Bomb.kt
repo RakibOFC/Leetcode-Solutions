@@ -4,7 +4,7 @@ class Solution {
         val decrypt = IntArray(n)
 
         if (k > 0) {
-            for (i in 0 until n) {
+            for (i in 0..<n) {
                 var sum = 0
                 for (j in 1..k) {
                     sum += code[(i + j) % n]
@@ -13,7 +13,7 @@ class Solution {
             }
 
         } else if (k < 0) {
-            for (i in 0 until n) {
+            for (i in 0..<n) {
                 var sum = 0
                 for (j in 1..-k) {
                     sum += code[(i - j + n) % n]
@@ -22,7 +22,7 @@ class Solution {
             }
 
         } else {
-            for (i in 0 until n) {
+            for (i in 0..<n) {
                 decrypt[i] = 0
             }
         }
