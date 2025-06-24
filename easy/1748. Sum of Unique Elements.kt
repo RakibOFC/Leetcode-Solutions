@@ -1,3 +1,24 @@
+// Solution 2. (0ms)
+class Solution {
+    fun sumOfUnique(nums: IntArray): Int {
+        val freq = IntArray(101)
+        var sum = 0
+        
+        for (num in nums) {
+            freq[num]++
+        }
+        
+        for (num in nums) {
+            if (freq[num] == 1){
+                sum += num
+            }
+        }
+        
+        return sum
+    }
+}
+
+// Solution 1. (2ms)
 class Solution {
     fun sumOfUnique(nums: IntArray): Int {
         val n = nums.size
