@@ -1,3 +1,17 @@
+// Solution 3. (0ms)
+class Solution {
+    fun countSegments(s: String): Int {
+        var count = 0
+        for (i in s.indices) {
+            if (s[i] != ' ' && (i == 0 || s[i - 1] == ' ')) {
+                count++
+            }
+        }
+        return count
+    }
+}
+
+// Solution 1. (0ms)
 class Solution {
     fun countSegments(s: String): Int {
         if (s.isEmpty()) return 0
@@ -13,5 +27,12 @@ class Solution {
         }
 
         return count
+    }
+}
+
+// Solution 1. (13ms)
+class Solution {
+    fun countSegments(s: String): Int {
+        return s.trim().split("\\s+".toRegex()).filter { it.isNotEmpty() }.size
     }
 }
